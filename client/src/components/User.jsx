@@ -2,7 +2,7 @@ import React from 'react';
 import Profile from './../assets/profile.webp';
 
 const User = (props) => {
-  return (
+  return ( 
     <div className='flex gap-2 justify-end'>
       <div className='px-3 glass max-w-[32.4rem] rounded-2xl'>
         {props.prompt} {/* Display the message */}

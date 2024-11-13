@@ -9,7 +9,9 @@ const TextComponent = (props) => {
     e.preventDefault();
     
     const prompt = input;
-    props.setPrompt(input); // Set the prompt in parent component, if needed
+    props.setPrompt(input);
+    setInput('');
+    // Set the prompt in parent component, if needed
 
     setIsLoading(true);  // Set loading to true when the request is sent
 
@@ -24,7 +26,7 @@ const TextComponent = (props) => {
   
       if (res.ok) {
         const data = await res.json();
-        console.log('Response:', data.message);  // Log the AI response to the console
+        props.setresponse(data.message)  
       } else {
         console.error('Error: ', res.statusText);
       }
@@ -34,7 +36,7 @@ const TextComponent = (props) => {
       setIsLoading(false);  // Reset the loading state after the request is finished
     }
 
-    setInput('');  // Reset the input field after submission
+      // Reset the input field after submission
   };
 
   return (
