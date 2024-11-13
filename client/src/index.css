@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+/* For Chrome, Safari, and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+.glass {
+  background: rgba(36, 36, 36, 0.5); /* Slightly transparent background */
+  border-radius: 10px;                /* Rounded corners */
+  backdrop-filter: blur(10px);        /* Adds the glassy blur effect */
+  -webkit-backdrop-filter: blur(20px);/* For Safari support */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Light border for outline */
+                      /* Adds spacing inside the element */
+}
